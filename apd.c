@@ -278,16 +278,16 @@ void TestarPalavra(char * palavra){
 }
 
 
-int main(){
+int main( int argc, char *argv[ ] ){
 
     char palavra[100];
 
     iniciarAPD(&apd);
     iniciarPilha(&pilha);
-    FILE * entrada = fopen("test.txt","r");
+    FILE * entrada = fopen(argv[1],"r");
 
     if(entrada == NULL){
-        printf("Arquivo nao encontrado\n");
+        printf("Arquivo nao encontrado :(\n");
         return 0;
     }
     apd = lerAPD(entrada);
