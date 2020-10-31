@@ -147,7 +147,7 @@ Transicao escolheTransicaoNormal(char estadoInicial, char letra){
             }
         }
     }
-    return erro; //Nenhuma transiÁ„o possivel
+    return erro; //Nenhuma transi√ß√£o possivel
 }
 
 
@@ -161,9 +161,9 @@ void TestarPalavra(char * palavra){
 
     for(int i = 0; palavra[i] != '\0' ;i++){//Percorre a palavra
 
-        transicao = escolheTransicaoNormal(estadoAtual, palavra[i]); //Escolhe a transiÁ„o do estado a partir da letra da palavra
+        transicao = escolheTransicaoNormal(estadoAtual, palavra[i]); //Escolhe a transi√ß√£o do estado a partir da letra da palavra
 
-        if(transicao.caracter != '\0'){//TransiÁ„o encontrada
+        if(transicao.caracter != '\0'){//Transi√ß√£o encontrada
 
             estadoAtual = transicao.estadoDestino;// Atualiza o estado da apd
 
@@ -184,7 +184,7 @@ void TestarPalavra(char * palavra){
 
             free(caracteres_empilhados);
         }
-        else{//TransiÁ„o normal n„o existente
+        else{//Transi√ß√£o normal n√£o existente
 
             transicao = escolheTransicaoLambda(estadoAtual);
 
@@ -287,7 +287,7 @@ int main( int argc, char *argv[ ] ){
     FILE * entrada = fopen(argv[1],"r");
 
     if(entrada == NULL){
-        printf("Usar: ./apd [APD]\nTerminar: CTRL+C");
+        printf("Usar: ./apd [APD]\nTerminar: CTRL+C\n");
         return 404;
     }
 
