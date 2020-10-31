@@ -287,14 +287,17 @@ int main( int argc, char *argv[ ] ){
     FILE * entrada = fopen(argv[1],"r");
 
     if(entrada == NULL){
-        printf("Arquivo nao encontrado :(\n");
-        return 0;
+        printf("Usar: ./apd [APD]\nTerminar: CTRL+C");
+        return 404;
     }
+
     apd = lerAPD(entrada);
 
+    //Fecha com Ctrl+C
     while(1){
         printf("palavra: ");
         scanf(" %s", palavra);
+
         TestarPalavra(palavra);
 
         iniciarPilha(&pilha);
